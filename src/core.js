@@ -74,6 +74,8 @@ export const string2csv = ((data, headers, separator, enclosingCharacter) =>
 );
 
 export const toCSV = (data, headers, separator, enclosingCharacter) => {
+  console.log("In CSV")
+  console.log(data)
  if (isJsons(data)) return jsons2csv(data, headers, separator, enclosingCharacter);
  if (isArrays(data)) return arrays2csv(data, headers, separator, enclosingCharacter);
  if (typeof data ==='string') return string2csv(data, headers, separator);
